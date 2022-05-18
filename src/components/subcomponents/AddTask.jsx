@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import MyTasksContext from '../../context/MyTasksContext';
 
 export default function AddTask() {
+  const { tasks, setTasks } = useContext(MyTasksContext);
+  const [taskInput, setTaskInput] = useState('');
+
+  function handleChange(event) {
+    setTaskInput(event.target.value);
+  }
+
+  function handleClick() {
+    setTasks([...tasks, { id: Math.random(), name: taskInput }]);
+    setTaskInput('');
+  }
+
   return (
     <div className="flex justify-center m-10">
       <button
@@ -11,10 +24,12 @@ export default function AddTask() {
       </button>
       <button
         type="button"
-        className="text-purple-palette hover:text-purple-hover-palette text-[24px] transition duration-300"
+        className="text-purple-palette hover:text-purple-hover-palette text-[24px] font-bold transition duration-300"
+        onClick={handleClick}
       >
         Add New Task
       </button>
+      <input onChange={handleChange} value={taskInput} type="text" />
     </div>
   );
 }
