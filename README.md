@@ -7,7 +7,7 @@ Neste projeto foi desenvolvido uma simples lista de tarefas, nessa lista o usuá
 - Remover uma tarefa;
 - Visualizar o número de tarefas pendentes;
 ---
-![GifDemonstração](https://media.giphy.com/media/eTeJhlsJmoApiWSRlz/giphy.gif)
+![GifDemonstração](https://media.giphy.com/media/MZpmhmUugyRtdTpiEW/giphy.gif)
 ---
 
 ## Stacks
