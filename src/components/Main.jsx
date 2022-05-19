@@ -5,7 +5,7 @@ import Tasks from './subcomponents/Tasks';
 
 export default function Main() {
   return (
-    <div id="Main" className="h-screen">
+    <div id="Main" className="h-screen w-screen">
       <Navbar />
       <AddTask />
       <Tasks />
