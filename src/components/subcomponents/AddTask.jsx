@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import MyTasksContext from '../../context/MyTasksContext';
 
 export default function AddTask() {
-  const { tasks, setTasks } = useContext(MyTasksContext);
+  const { tasks, setTasks, setTasksPending } = useContext(MyTasksContext);
   const [taskInput, setTaskInput] = useState('');
 
   function handleChange(event) {
@@ -13,6 +13,7 @@ export default function AddTask() {
     if (taskInput) {
       setTasks([...tasks, { id: Math.random(), name: taskInput }]);
       setTaskInput('');
+      setTasksPending(tasks.length + 1);
     }
   }
 

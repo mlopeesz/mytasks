@@ -5,10 +5,11 @@ import MyTasksContext from './context/MyTasksContext';
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [tasksPending, setTasksPending] = useState(0);
 
   return (
     <div className="App bg-light-palette">
-      <MyTasksContext.Provider value={{ tasks, setTasks }}>
+      <MyTasksContext.Provider value={{ tasks, setTasks, tasksPending, setTasksPending }}>
         <Home />
         <Main />
       </MyTasksContext.Provider>
