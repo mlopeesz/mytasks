@@ -14,7 +14,6 @@ export default function AddTask() {
       setTasks([...tasks, { id: Math.random(), name: taskInput }]);
       setTaskInput('');
     }
-    alert('Cannot add empty task!');
   }
 
   return (
